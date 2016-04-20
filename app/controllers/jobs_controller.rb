@@ -10,7 +10,6 @@ class JobsController < ApplicationController
 
   def create
     Job.create(job_params)
-
     redirect_to jobs_path
   end
 
