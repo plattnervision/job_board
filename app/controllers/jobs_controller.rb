@@ -8,9 +8,13 @@ class JobsController < ApplicationController
     @job = Job.new
   end
 
+  def view
+    @jobs = Job.all
+  end
+
   def create
     Job.create(job_params)
-    redirect_to jobs_path
+    redirect_to all_jobs_path
   end
 
   def edit
@@ -19,12 +23,12 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.update(params[:id],job_params)
-    redirect_to jobs_path
+    redirect_to all_jobs_path
   end
 
   def destroy
     @job = Job.destroy(params[:id])
-    redirect_to jobs_path
+    redirect_to all_jobs_path
   end
 
   def show

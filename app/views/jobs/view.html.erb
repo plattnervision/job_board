@@ -1,0 +1,10 @@
+<h1> RailsBridgeCorp Open Jobs </h1>
+
+<% @jobs.each do |job| %>
+<tbody>
+    <tr>
+      <tb> <h3><%= job.title %></h3> </tb>
+      <tb> <h4><%= link_to "view", job %></h4> </tb>
+    </tr>
+</tbody>
+<% end %>
